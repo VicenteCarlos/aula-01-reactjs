@@ -16,6 +16,12 @@ const App = () => {
   //   console.log("Renderizou")
   // }, [estado]);
 
+  useEffect(() => {
+    fetch("https://api.adviceslip.com/advice")
+      .then(response => console.log(response))
+      .catch(error => console.log(error))
+  }, [])
+
   const add = () => setEstado(estado + 1);
   
   return (
